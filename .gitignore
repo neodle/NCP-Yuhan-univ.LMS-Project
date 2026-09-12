@@ -1,0 +1,17 @@
+# 대용량 원본 영상 (GitHub Release 자산으로 배포)
+docs/videos/*.mp4
+docs/videos/*.mov
+docs/videos/*.mkv
+
+# 원본 문서 (개인정보 포함 가능)
+*.hwp
+*.hwpx
+*.pptx
+*.zip
+
+# OS / 편집기
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
