@@ -1,84 +1,86 @@
-# 제안요청서 요약 및 비용 산정 기준
+<p align="right"><b>English</b> · <a href="rfp-summary.ko.md">한국어</a></p>
 
-출처: 「유한대학교_2025 LMS - eClass 유지보수 및 클라우드 운영_제안요청서」 (나라장터 공고)
+# RFP summary and cost basis
+
+Source: *"Yuhan University 2025 LMS – eClass Maintenance and Cloud Operations"* request for proposal, published on KONEPS.
 
 ---
 
-## 1. 사업 안내
+## 1. Contract overview
 
-| 항목 | 내용 |
+| Item | Detail |
 | --- | --- |
-| 사업명 | 유한대학교 학습 시스템(e-Class) 유지 보수 |
-| 일정 | 2025년 3월 ~ 2026년 2월 (약 1년) |
-| 사업자 선정 방식 | 일반 경쟁 입찰 (총액) |
-| 유지보수금액 지급 | 매월 보고서 제출 · 승인 후 세금계산서 발행 |
+| Title | Yuhan University Learning System (e-Class) maintenance |
+| Term | March 2025 – February 2026 (about one year) |
+| Award method | Open competitive bidding (lump sum) |
+| Payment | Monthly report submitted and approved, then tax invoice issued |
 
-## 2. 사업 배경 및 필요성
+## 2. Why the contract exists
 
-1. 온라인 교육의 중요성이 증대되는 시대의 흐름에 맞추어 교육의 질과 운영의 유연성을 지속적으로 확보
-2. 교육성과의 분석 및 모니터링, 평가, 환류, 교육정책 연구 및 개발 환경 필요
-3. 인재 양성을 위한 체계적인 교육혁신을 지원하고 학습자 분석을 지원하는 시스템 마련
-4. 전문 업체를 활용한 안정적이고 체계적인 LMS 운용관리를 통한 사용자 만족도 제고
+1. Sustain teaching quality and operational flexibility as online education grows in importance
+2. Provide an environment for analysing and monitoring learning outcomes, evaluation, feedback loops and education-policy research
+3. Build a system that supports systematic educational innovation and learner analytics
+4. Raise user satisfaction through stable, professionally managed LMS operations
 
 ---
 
-## 3. 기존 인프라 현황
+## 3. Existing infrastructure
 
-![인프라 현황](images/infra/rfp-infra-stack.png)
+![Existing infrastructure](images/infra/rfp-infra-stack.png)
 
-| 구분 | 종류 | 기타 |
+| Category | Product | Note |
 | --- | --- | --- |
 | DBMS | MySQL | |
 | WEB / WAS | Apache | |
-| LMS 플랫폼 | COURSEMOS LMS | |
-| Storage | NCP | 무제한 |
-| CDN | NCP | 무제한 |
+| LMS platform | COURSEMOS LMS | |
+| Storage | NCP | Unlimited |
+| CDN | NCP | Unlimited |
 | IBT | Coursemos IBT | |
-| 공인인증서 | PKI 솔루션 | |
-| 원격지원 | ezhelp | |
-| DB 이중화 | HA Solution | |
+| Certificates | PKI solution | |
+| Remote support | ezhelp | |
+| DB redundancy | HA solution | |
 
-## 4. 기존 인프라 구성도
+## 4. Existing infrastructure diagram
 
-![인프라 구성도](images/infra/rfp-infra-diagram.png)
+![Infrastructure diagram](images/infra/rfp-infra-diagram.png)
 
-LMS 영역과 CDN 영역을 VPC Peering으로 연결하고, 운영자 PC는 보안 GW를 통해서만 접근하며
-학내 학사행정은 VPN으로 연계되는 구조입니다. 24×365 보안관제가 전제되어 있습니다.
+The LMS zone and the CDN zone are joined by VPC peering. Operator PCs reach the system only through a
+security gateway, and the on-campus academic-affairs system is linked over VPN. 24×365 security monitoring is assumed.
 
 ---
 
-## 5. 클라우드 서비스 충족 사항
+## 5. Required cloud services
 
-![클라우드 서비스 충족 사항](images/infra/rfp-cloud-requirements.png)
+![Required cloud services](images/infra/rfp-cloud-requirements.png)
 
-| 구분 | 항목 | CPU(vcore) | MEM(GB) | DISK(GB) | 수량 |
+| Category | Item | CPU (vcore) | MEM (GB) | DISK (GB) | Qty |
 | --- | --- | --- | --- | --- | --- |
-| 운영 서버 | WEB/WAS | 4 | 8 | 50 | 1 |
-| 운영 서버 | WEB/WAS | 8 | 16 | 50 | 2 |
-| 운영 서버 | DB | 8 | 16 | 500 | 1 |
-| CACHE 서버 | — | 2 | 8 | 50 | 1 |
-| 개발 서버 | — | 2 | 4 | 200 | 1 |
-| **소계** | | | | | **6식** |
+| Production | WEB/WAS | 4 | 8 | 50 | 1 |
+| Production | WEB/WAS | 8 | 16 | 50 | 2 |
+| Production | DB | 8 | 16 | 500 | 1 |
+| Cache | — | 2 | 8 | 50 | 1 |
+| Development | — | 2 | 4 | 200 | 1 |
+| **Subtotal** | | | | | **6** |
 
-그 외 요구 항목
+Other requirements
 
-- **시스템 S/W** — OS(Linux) 6식, WEB 및 WEB 서버 기술지원, DBMS 및 DBMS 기술지원
-  (상용 S/W일 경우 라이선스 비용 일체 계약상대자 부담)
-- **CDN** — 학습관리시스템 이용자에 대해 동영상 전송·변환이 가능한 VOD CDN 서비스 제공 (무제한)
-- **보안 시스템** — 침입방지시스템(IPS), 방화벽(F/W), 웹방화벽(WAF)
-- **운영 관리** — 로드밸런서(1개월, 720시간), 통합운영관리
-- **저장소** — NAS Storage 5,000GB, 스냅샷 Backup, Object Storage 2,000GB
+- **System software** — OS (Linux) ×6, web server and its technical support, DBMS and its technical support
+  (any commercial software licence is borne entirely by the contractor)
+- **CDN** — VOD CDN capable of delivering and transcoding video for LMS users (unlimited)
+- **Security** — intrusion prevention system (IPS), firewall, web application firewall (WAF)
+- **Operations** — load balancer (1 month, 720 hours), integrated operations management
+- **Storage** — NAS storage 5,000 GB, snapshot backup, Object Storage 2,000 GB
 
 ---
 
-## 6. 비용 산정 기준
+## 6. Cost basis
 
-제안 단계에서 NCP 요금제를 기준으로 예상 비용을 산정했으며, 다음 기준을 적용했습니다.
+Costs were estimated at the proposal stage against NCP's published price list, on the following basis.
 
-- 사업 일정: 2025년 3월 ~ 2026년 2월 (약 1년)
-- 유지보수금액 지급: 매월 보고서 제출 · 승인 후 세금계산서 발행
-- **VAT** — 모든 유료 서비스에 대해 10%의 부가가치세가 별도 부과 (NCP 기본 정책)
-- 사용량 기반 과금 항목(트래픽, 변환량 등)은 이용량에 따라 달라지므로 **고정 지출만 산정**
+- Contract term: March 2025 – February 2026 (about one year)
+- Payment: monthly report submitted and approved, then tax invoice issued
+- **VAT** — 10% is charged separately on every paid service (standard NCP policy)
+- Usage-based line items (traffic, transcoding volume) vary with actual consumption, so **only fixed costs were estimated**
 
-산정 대상은 운영 서버(WEB/WAS, DB), CACHE 서버, 개발 서버, CDN+, NAS, Object Storage,
-Load Balancer이며, 세부 단가는 제안 시점의 NCP 공개 요금표를 따랐습니다.
+The estimate covers the production servers (WEB/WAS, DB), cache server, development server, CDN+, NAS,
+Object Storage and the load balancer, priced against the NCP rate card current at the time of the proposal.

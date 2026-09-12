@@ -1,12 +1,15 @@
-# 데모 영상
+# Demo videos · 데모 영상
+
+The original mp4 files are too large to keep in the repository, so they are published as
+**GitHub Release assets**.
 
 원본 mp4 파일은 용량이 커 저장소에 직접 포함하지 않고 **GitHub Release 자산**으로 배포합니다.
 
-- 릴리스: [v1.0-demo](https://github.com/neodle/NCP-Yuhan-univ.LMS-Project/releases/tag/v1.0-demo)
+- Release / 릴리스: [v1.0-demo](https://github.com/neodle/NCP-Yuhan-univ.LMS-Project/releases/tag/v1.0-demo)
 
-| 파일 | 촬영일 | 내용 |
-| --- | --- | --- |
-| `20250804.mp4` | 2025-08-04 | 웹 서버 구축 및 초기 화면 구성 |
-| `20250805.mp4` | 2025-08-05 | 로그인 · 강의실 · 학습 페이지 이동 |
-| `20250806.mp4` | 2025-08-06 | 동영상 강의 재생 및 학습 진행 |
-| `20250807.mp4` | 2025-08-07 | 실시간(LIVE) 강의 송출 데모 |
+| File | Date | Content | 내용 |
+| --- | --- | --- | --- |
+| `20250804.mp4` | 2025-08-04 | Web server provisioning and first screens | 웹 서버 구축 및 초기 화면 구성 |
+| `20250805.mp4` | 2025-08-05 | Login · classroom · study page navigation | 로그인 · 강의실 · 학습 페이지 이동 |
+| `20250806.mp4` | 2025-08-06 | Video lecture playback and progress | 동영상 강의 재생 및 학습 진행 |
+| `20250807.mp4` | 2025-08-07 | Live lecture broadcasting demo | 실시간(LIVE) 강의 송출 데모 |
