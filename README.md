@@ -18,7 +18,7 @@
 | --- | --- |
 | Period | 2025.07.29 (proposal) – 2025.08.21 (final presentation) |
 | Format | Individual internship project at Cloud Square Inc. |
-| Author | Minsoo Kang (Dept. of Artificial Intelligence, Konyang University) |
+| Author | Minsoo Kang |
 | Source notice | Yuhan University e-Class maintenance — Mar 2025 – Feb 2026, open competitive bidding (lump sum) |
 | Cloud | Naver Cloud Platform (VPC environment) |
 | Service endpoints | `101.79.10.254` (web public IP) / `lms-lb-107699287-8e09815088dd.kr.lb.naverncp.com` (Load Balancer) |
@@ -379,4 +379,4 @@ so the strategy was to finish a **prototype made of the minimum set of component
 
 ### Author
 
-**Minsoo Kang** — Dept. of Artificial Intelligence, Konyang University · 2025 internship at Cloud Square Inc.
+**Minsoo Kang** — 2025 internship at Cloud Square Inc.
